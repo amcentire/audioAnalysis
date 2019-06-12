@@ -15,6 +15,9 @@
 		9C42953A22B173CF0015B2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C42953822B173CF0015B2A2 /* LaunchScreen.storyboard */; };
 		9C42954522B173CF0015B2A2 /* audioPhileAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C42954422B173CF0015B2A2 /* audioPhileAnalyzerTests.swift */; };
 		9C42955022B173CF0015B2A2 /* audioPhileAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C42954F22B173CF0015B2A2 /* audioPhileAnalyzerUITests.swift */; };
+		9C42956222B1832D0015B2A2 /* ClapOrCoughClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C42956122B1832D0015B2A2 /* ClapOrCoughClassifier 1.mlmodel */; };
+		9C42956622B1837C0015B2A2 /* testAudio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C42956522B1837C0015B2A2 /* testAudio.wav */; };
+		9C42956A22B192700015B2A2 /* ResultsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C42956922B192700015B2A2 /* ResultsObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		9C42954B22B173CF0015B2A2 /* audioPhileAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = audioPhileAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C42954F22B173CF0015B2A2 /* audioPhileAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioPhileAnalyzerUITests.swift; sourceTree = "<group>"; };
 		9C42955122B173CF0015B2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C42956122B1832D0015B2A2 /* ClapOrCoughClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "ClapOrCoughClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		9C42956522B1837C0015B2A2 /* testAudio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = testAudio.wav; sourceTree = "<group>"; };
+		9C42956822B189510015B2A2 /* audioPhileAnalyzer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = audioPhileAnalyzer.entitlements; sourceTree = "<group>"; };
+		9C42956922B192700015B2A2 /* ResultsObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +106,11 @@
 		9C42952C22B173C80015B2A2 /* audioPhileAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				9C42956822B189510015B2A2 /* audioPhileAnalyzer.entitlements */,
 				9C42952D22B173C80015B2A2 /* AppDelegate.swift */,
+				9C42956322B183440015B2A2 /* ML */,
+				9C42956422B183580015B2A2 /* Resources */,
+				9C42956722B184130015B2A2 /* Model */,
 				9C42952F22B173C80015B2A2 /* SceneDelegate.swift */,
 				9C42953122B173C80015B2A2 /* ViewController.swift */,
 				9C42953322B173C80015B2A2 /* Main.storyboard */,
@@ -126,6 +137,30 @@
 				9C42955122B173CF0015B2A2 /* Info.plist */,
 			);
 			path = audioPhileAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+		9C42956322B183440015B2A2 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				9C42956122B1832D0015B2A2 /* ClapOrCoughClassifier 1.mlmodel */,
+				9C42956922B192700015B2A2 /* ResultsObserver.swift */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		9C42956422B183580015B2A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C42956522B1837C0015B2A2 /* testAudio.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C42956722B184130015B2A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C42956622B1837C0015B2A2 /* testAudio.wav in Resources */,
 				9C42953A22B173CF0015B2A2 /* LaunchScreen.storyboard in Resources */,
 				9C42953722B173CF0015B2A2 /* Assets.xcassets in Resources */,
 				9C42953522B173C80015B2A2 /* Main.storyboard in Resources */,
@@ -259,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C42956222B1832D0015B2A2 /* ClapOrCoughClassifier 1.mlmodel in Sources */,
 				9C42953222B173C80015B2A2 /* ViewController.swift in Sources */,
 				9C42952E22B173C80015B2A2 /* AppDelegate.swift in Sources */,
 				9C42953022B173C80015B2A2 /* SceneDelegate.swift in Sources */,
+				9C42956A22B192700015B2A2 /* ResultsObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +472,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = audioPhileAnalyzer/audioPhileAnalyzer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = QV45K8NBA4;
 				INFOPLIST_FILE = audioPhileAnalyzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.audioPhileAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,14 +494,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = audioPhileAnalyzer/audioPhileAnalyzer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = QV45K8NBA4;
 				INFOPLIST_FILE = audioPhileAnalyzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.audioPhileAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
