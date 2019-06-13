@@ -23,7 +23,7 @@ class ResultsObserver : NSObject, SNResultsObserving {
         let confidence = classification.confidence * 100.0
         let percent = String(format: "%.2f%%", confidence)
         
-        let liveResult = ("Analysis result for audio at time: \(formattedTime) | \(classification.identifier): \(percent) confidence.\n")
+        let liveResult = ("\(formattedTime) : \(classification.identifier): \(percent) confidence.\n")
         resultArray.append(liveResult)
         
     }
